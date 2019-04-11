@@ -168,6 +168,15 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+nav h1 {
+  display: flex;
+  align-items: center;
+}
+nav .navlinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -220,6 +229,13 @@ img {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+}
+.home .content-pick .btn {
+  font-size: 15px;
+  background-color: #008080;
+  border-radius: 80px;
+  width: 38%;
+  align-content: center;
 }
 .home .content-pick .destination {
   width: 30%;
