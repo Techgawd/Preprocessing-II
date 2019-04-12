@@ -170,12 +170,28 @@ img {
 }
 nav h1 {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+}
+@media (max-width: 500px) {
+  nav h1 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 nav .navlinks {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+nav a {
+  color: black;
+  font-size: 15px;
+  margin: 30px;
+}
+.bordernav {
+  width: 100%;
+  border-top: 2px dashed silver;
 }
 .footer {
   width: 100%;
@@ -230,12 +246,33 @@ nav .navlinks {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick h4 {
+    margin: 10px 20px 5px 100px;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick h4 p {
+    margin: 10px 20px 5px 100px;
+  }
+}
 .home .content-pick .btn {
   font-size: 15px;
   background-color: #008080;
   border-radius: 80px;
-  width: 38%;
-  align-content: center;
+  width: 45%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home .content-pick .destination {
   width: 30%;

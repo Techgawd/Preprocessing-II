@@ -14,7 +14,19 @@
 @eastern-blue: #17A2B8;
 @sandy-beach: #FFEBCD;
 
+//Variables here
+@mobile: ~"(max-width: 500px)";
+
+
+
+
 // Mixins here
+
+.layout(@justify, @align){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -115,18 +127,28 @@ table {
   // Navigation Styles here
 
   nav{
-    
     h1 {
-        display:flex;
-        align-items: center;
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        }
+
+      .layout(flex-start, center);
+
     }
     .navlinks{
-         display: flex;
-         justify-content: flex-end;
-         align-items: center;
-    
+      
+      .layout(flex-end, center);
     }
-    
+    a {
+      color: black;
+      font-size: 15px;
+      margin: 30px;
+    }
+    }
+    .bordernav {
+    width: 100%;
+    border-top: 2px dashed silver;
     }
 //footer
   .footer {
@@ -188,10 +210,11 @@ table {
     .content-destination {
       width: 75%;
       margin: 0 auto 30px;
-  
+
       img {
         border-radius: 10px;
       }
+
     }
   
     .content-pick {
@@ -199,13 +222,32 @@ table {
       border-top: 2px dashed @navigation-border;
       display: flex;
       justify-content: space-between;
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+       align-items: stretch;
+       justify-content: center;
+      
+      }
+      h4 {
 
+        @media @mobile {
+        margin: 10px 20px 5px 100px;
+        }
+p{
+  @media @mobile {
+    margin: 10px 20px 5px 100px;
+    }
+}
+      }
       .btn{
           font-size: 15px;
           background-color: #008080;
           border-radius: 80px;
-          width: 38%;
-          align-content: center;
+          width: 45%;
+          height: 20px;
+
+          .layout(center, center);
       }
   
       .destination {
